@@ -17,11 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="border-b">
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <header>
           <Header />
         </header>
+
         {children}
+
+        <footer className="container mx-auto border-t border-gray-400 px-4 py-8 text-center mt-auto">
+          <p>&copy; 2023 FitLife. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );
