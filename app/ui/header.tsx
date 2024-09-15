@@ -24,7 +24,7 @@ export default function Header() {
         >
           <Navbar.Brand>
             <h1 className="text-primary text-2xl font-bold dark:text-white">
-              FitLife
+              FitLife-Pro
             </h1>
           </Navbar.Brand>
           <Navbar.Toggle />
