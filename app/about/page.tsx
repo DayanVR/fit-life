@@ -1,5 +1,10 @@
 import Card from "../ui/exercise/exerciseCard";
 import { Heart, Dumbbell, UserFriends, Trophy } from "../icons/icons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 export default function Page() {
   return (

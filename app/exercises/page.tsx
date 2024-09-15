@@ -5,6 +5,11 @@ import SelectLimit from "../ui/exercise/select-limit";
 import Pagination from "../ui/exercise/pagination";
 import SelectMuscle from "../ui/exercise/muscles/select-muscle";
 import { ExerciseListSkeleton } from "../ui/skeletons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Exercises",
+};
 
 export default function Page({
   searchParams,
