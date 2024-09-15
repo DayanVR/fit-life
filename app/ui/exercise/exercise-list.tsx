@@ -27,7 +27,8 @@ export default async function ExerciseList({
     ...(page && { page }),
     ...(muscle && { muscle }),
   };
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  console.log(`${process.env.NEXT_PUBLIC_URL}/public/imgs/${exercisesData[0].images[0]}`);
 
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
