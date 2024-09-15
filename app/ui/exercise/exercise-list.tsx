@@ -30,7 +30,7 @@ export default async function ExerciseList({
   // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
       {exercisesData.map((exercise) => {
         return (
           <Link
@@ -39,19 +39,20 @@ export default async function ExerciseList({
               query: queryParams,
             }}
             key={exercise.id}
-            className="flex w-full flex-col rounded-lg bg-gray-400/60 p-3 hover:scale-105 transition-transform"
+            className="flex w-full flex-col rounded-lg bg-gray-400/60 p-3 transition-transform hover:scale-105"
           >
-            <div className="relative h-52 w-full lg:h-52 xl:h-60 ">
+            <div className="relative h-52 w-full lg:h-52 xl:h-60">
               <Image
+                priority
                 src={`${process.env.NEXT_PUBLIC_URL}/imgs/${exercise.images[0]}`}
                 alt={exercise.name}
                 fill
-                className="aspect-square xl:aspect-video rounded-md"
+                className="aspect-square rounded-md xl:aspect-video"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div>
-              <h2 className="text-balance mt-4 text-2xl xl:text-3xl font-semibold">
+              <h2 className="mt-4 text-balance text-2xl font-semibold xl:text-3xl">
                 {exercise.name}
               </h2>
             </div>
